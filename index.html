@@ -14,7 +14,28 @@
 <body>
     <header class="hero">
         <nav>
-            <input type="text" class="nav__search-bar" id="js-search-bar" placeholder="username">
+            <input type="text" class="nav__search-bar" id="search-bar" placeholder="username">
+            <div class="nav__search-result">
+                <a class="search-result__link hidden" id="search-result" href="javascript:void(0)">
+                    <div class="search-result__img"><img class="user-img" id="user-img"
+                            src="images/github-mark-white.png" alt=""></div>
+                    <div class="search-result__information">
+                        <p id="user-name">GitHub</p>
+                        <p class="information__bio" id="user-bio">How people build software.</p>
+                    </div>
+                </a>
+                <div class="not-found hidden">
+                    <p>Username does not exist.</p>
+                </div>
+                <div class="loader hidden">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
         </nav>
         <img class="hero__image" src="images/hero-image-github-profile.png" alt="">
     </header>
@@ -22,29 +43,29 @@
         <main>
             <div class="profile">
                 <span class="profile__image">
-                    <img id="js-profile-image" src="images/github-mark-white.png" alt="">
+                    <img id="profile-image" src="images/github-mark-white.png" alt="">
                 </span>
                 <div class="profile__details">
                     <div class="profile__detail">
                         <p>Followers</p>
                         <span class="profile-detail__divider"></span>
-                        <span class="profile__values" id="js-follower">27839</span>
+                        <span class="profile__values" id="follower">27839</span>
                     </div>
                     <div class="profile__detail">
                         <p>Following</p>
                         <span class="profile-detail__divider"></span>
-                        <span class="profile__values" id="js-following">0</span>
+                        <span class="profile__values" id="following">0</span>
                     </div>
                     <div class="profile__detail">
                         <p>Location</p>
                         <span class="profile-detail__divider"></span>
-                        <span class="profile__values" id="js-location">San Francisco, CA</span>
+                        <span class="profile__values" id="location">San Francisco, CA</span>
                     </div>
                 </div>
             </div>
             <section>
-                <h1>GitHub</h1>
-                <p>How people build software.</p>
+                <h1 id="profile-name">GitHub</h1>
+                <p id="profile-bio">How people build software.</p>
                 <div class="repositories">
                     <div class="repository">
                         <h2 class="repository__title">.github</h2>
